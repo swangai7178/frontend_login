@@ -1,5 +1,5 @@
-// ignore_for_file: unnecessary_new, avoid_print
-
+// ignore_for_file: unnecessary_new
+import 'package:flutter/src/widgets/form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:frontend_login/signup.dart';
@@ -18,8 +18,7 @@ class Signin extends StatefulWidget {
 class _SigninState extends State<Signin> {
   final _formKey = GlobalKey<FormState>();
   Future save() async {
-      // ignore: unused_local_variable
-      var url = Uri.parse('http://localhost:8080/signin');
+    var url = Uri.parse('http://localhost:8080/signin');
 
     var res = await http.post(url,
         headers: <String, String>{
